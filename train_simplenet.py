@@ -251,7 +251,8 @@ def run_procedure():
 
     print("Number of images in the train dataset: ", len(trn_dataset))
     print("Number of images in the valid dataset: ", len(val_dataset))
-    print("Label indexing: ", trn_dataset.class_to_idx)
+    indexing_dict = trn_dataset.class_to_idx
+    print("Label indexing: ", indexing_dict)
 
     # Get device information
     device = get_device()
@@ -286,7 +287,8 @@ def run_procedure():
         "epochs": args.epochs,
         "learn_rate": args.learn_rate,
         "batch_size": args.batch,
-        "optimizer": "Adam"
+        "optimizer": "Adam",
+        "indexing": indexing_dict
     }
 
     save_results(output_dir=args.output_dir, model=model, context=context, history=res_df)
