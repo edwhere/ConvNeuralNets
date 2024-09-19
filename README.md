@@ -11,5 +11,5 @@ Train a ResNet neural network for image classification. This implementation has 
 Train a small and simple convolutional neural network. This implementation has the following characteristic:
 - It runs on CPU, Nvidia GPU, or in the Apple GPU (found in M1, M2 and M3 machines)
 
-## Function arguments
+## Command-line arguments
 Enter `python train_resnet_ignite.py -h` or `python train_simplenet.py - h` in the command line for a description of required and optional arguments.
